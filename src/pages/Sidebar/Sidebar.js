@@ -6,7 +6,8 @@ import Price  from "./Price/Price"
 import Colors from "./colors/Colors"
 
 
-function Sidebar() {
+function Sidebar(handleChange) {
+  console.log(handleChange)
   return (
     <section className='sidebar'>
         <div className='logo-container'>
@@ -14,9 +15,9 @@ function Sidebar() {
 
         </div>
 
-        <Catagory />
-        <Price />
-        <Colors />
+        <Catagory  handleChange={handleChange}/>
+        <Price handleChange={handleChange}/>
+        <Colors handleChange={handleChange}/>
         
 
     </section>
