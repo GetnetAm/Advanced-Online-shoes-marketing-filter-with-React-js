@@ -1,13 +1,14 @@
 import React from 'react'
 import './Colors.css'
 import Input from '../../../Components/Input'
+import '../catagory/Catagory.css'
 
 function Colors({handleChange}) {
   return (
     <div>
        <h2 className="sidebar-title color-title">Colors</h2>
        <label className="sidebar-label-container">
-        <input onChange={handleChange} type="radio" value="" name="" />
+        <input onChange={handleChange} type="radio" value="" name="test2" />
         <span className="checkmark all"></span>All
 
       </label>
@@ -16,23 +17,23 @@ function Colors({handleChange}) {
       handleChange={handleChange}
       value="black"
       title="Black"
-      name="test1" 
+      name="test2" 
       color="black"
       />
       <Input 
       handleChange={handleChange}
       value="blue"
       title="Blue"
-      name="test1"
+      name="test2"
       color="blue" 
       />
-        <span className='checkmark' style={{background:"blue"}}></span>
+      
       
       <Input 
       handleChange={handleChange}
       value="red"
       title="Red"
-      name="test1"
+      name="test2"
       color="red"
        />
       <Input 
@@ -42,26 +43,47 @@ function Colors({handleChange}) {
       name="test2"
       color='green'
        />
+
+    <label className="sidebar-label-container">
+          <input
+            onChange={handleChange}
+            type="radio"
+            value="white"
+            name="test1"
+          />
+          <span
+            className="checkmark"
+            style={{ background: "white", border: "2px solid black" }}
+          ></span>
+          White
+        </label>
+
+
+
+      {/* <label className='sidebar-label-container'>
+      <Input 
+     
+      handleChange={handleChange}
+      type="radio"
+      value="white"
+    
+     
+      name="test2"
+    
+       />
+       <span className='checkmark'
+        style={{background:"white",
+         border:"2px solid black"}} >
+        
+
+       </span>White
+
+      </label> */}
+
      
 
 
-      <label className='sidebar-label-container'>
-        <input
-        type='radio' onChange={handleChange}
-        value="white"
-        name='test1'
      
-        />
-        <span className='checkmark' style={{background:"white"}}></span>
-
-        {/* <span className='checkmark' 
-        style={{background: "green", border: "2px solid black",}}>
-
-          
-        </span> */}
-
-      </label>
-
     </div>
   )
 }

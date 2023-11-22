@@ -13,4 +13,12 @@ a{
 li{
   list-style: none;
 }
+.btns{
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: none;
+  border: 0.6px solid dodgerblue;
+  color: #323232;
+} 
 

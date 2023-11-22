@@ -1,5 +1,5 @@
 import React from 'react'
-import StarPurple500Icon from '@mui/icons-material/StarPurple500';
+// import StarPurple500Icon from '@mui/icons-material/StarPurple500';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 function Card({img, title, star, reviews, prevPrice, newPrice}) {
@@ -9,21 +9,22 @@ function Card({img, title, star, reviews, prevPrice, newPrice}) {
       <img src={img} className='card-img' alt='shoe' />
 
       <div className='card-details'>
-        <h3 className='card-title'>Shoe</h3>
+        <h3 className='card-title'>{title}</h3>
         <section className='card-reviews'>
-          <StarPurple500Icon className='ratings-start' />
+          {star} {star} {star} {star}
+          {/* <StarPurple500Icon className='ratings-start' />
            <StarPurple500Icon className='ratings-start'/>
             <StarPurple500Icon className='ratings-start'/>
-             <StarPurple500Icon className='ratings-start' />
+             <StarPurple500Icon className='ratings-start' /> */}
 
-             <span className='total-reviews'>4</span>
+             <span className='total-reviews'>{reviews}</span>
 
 
         </section>
 
         <section className='card-price'>
           <div className='price'>
-            <del>$300</del>200
+            <del>{prevPrice}</del>{newPrice}
 
           </div>
 
